@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UHY HNCO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    body{
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;   /* Horizontal scroll band */
+        overflow-y: auto;     /* Sirf vertical scroll allow */
+        margin:0;
+        padding:0;
+    }
+
+    /* ========== Navbar ========== */
+    .navbar {
+        height: 60px;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 50px;
+    }
+
+    /* ========== Logo Section ========== */
+    .nav-logo {
+        display: flex;
+        flex-direction: column;   /* Logo ke niche text arrange hoga */
+        align-items: flex-start;  /* Left side pe aligned */
+        justify-content: center;
+        height: 150px;
+    }
+
+    /* Actual logo image */
+    .logo{
+        width: 150px;
+        height: 150px;
+        background-image: url(UHY.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: left center;
+    }
+
+    /* Text bilkul logo ke nichay, zero space */
+    .connect {
+        font-size: 14px;
+        color: green;
+        margin-top: 0;   /* zero gap between logo and text */
+        line-height: 1;  /* aur closely chipkaane ke liye */
+        position: absolute;
+        top: 50px;
+        left: 80px;
+        width: 100%;
+ 
+        }
+
+        /* ========== Links ========== */
+        .navbar a {
+        font-size: 16px;     /* links chotay */
+        margin: 0 15px;
+        text-decoration: none;
+        color: rgb(40, 60, 148);
+        }
+
+        /* ========== Hover effect ========= */
+        .navbar a:hover {
+        text-decoration: underline;
+        }
+        /* Contact button special styling */
+        .contact-btn {
+        background: white;     
+        color: black !important; 
+        padding: 8px 20px;        /* button size */
+        border-radius: 0px;       /* rounded corners */
+        font-weight: lighter;
+        border: 1px solid black;
+        transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .contact-btn:hover {
+        background: rgb(92, 209, 92);     
+        transform: translateY(-2px);  /* slight lift effect */
+        }
+
+        /* ========== Main Container =========*/
+        .main-container{
+        max-width: 990px;
+        margin: 60px auto;
+        background: #01948f;
+        padding: 70px 190px;
+        border-radius: 0px;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+        color: black;
+        font-size: 24px;
+        text-align: left;
+        top: 60px;
+        left: 110px;
+        width: 100%;
+        animation: bgChange 4s infinite alternate ease-in-out;
+        }
+        /* Animate background change */
+        @keyframes bgChange {
+        0% {
+            background-image: url("animated video.jpg.gif");
+            background-size: cover;
+            background-position: center;
+        }
+        100% {
+            background-image: url("purple moving wallpaper.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+        }
+    .main-container h1 {
+        font-size: 50px;
+        color:white;
+        text-align: left;
+        margin-bottom: 50px;
+        }
+
+    /* ========== Paragraphs ========== */
+    .main-container p {
+        color: white;
+        margin: 0;
+        font-size: 24px;
+    }
+    .typing {
+        font-family: "Poppins", system-ui, sans-serif; 
+        font-size: 28px;
+        color: white;
+
+    /* typing effect setup */
+        width: 0ch;                 /* start hidden (0 characters) */
+        white-space: nowrap;        /* single line */
+        overflow: hidden;           /* hide the rest while typing */
+        border-right: 3px solid white; /* cursor */
+        box-sizing: content-box;    /* make sure width uses characters (ch) */
+  
+    /* animation:
+    duration: 3s (adjust to be slower/faster),
+    steps(15): 15 discrete steps (one per character),
+    0.5s delay before starting (optional),
+    forwards keeps final state (fully typed)
+    */
+        animation:
+        typing 3s steps(15) 0.5s forwards,
+        blink 0.7s step-end infinite;
+    }
+
+    /* Keyframes to increase width from 0 to full (15ch) */
+    @keyframes typing {
+        from { width: 0ch; }
+        to   { width: 15ch; } /* match the number of characters */
+    }
+
+    /* blinking cursor */
+    @keyframes blink {
+        50% { border-color: transparent; }
+    }
+    /* Button Styling */
+    .button {
+        display: inline-block;        /* inline button shape */
+        background-color: white;   
+        color: rgb(37, 51, 129);              
+        padding: 14px 30px;           /* size of button */
+        border-radius: 0px;           /* smooth corners */
+        font-size: 16px;
+        font-weight: lighter;
+        cursor: pointer;              /* hand icon on hover */
+        transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    /* Hover effect */
+    .button:hover {
+        background-color: rgb(92, 209, 92);
+        transform: translateY(-2px);  /* subtle lift effect */
+        text-decoration: underline;
+    }
+
+    /* Optional: to make text not selectable */
+    .button:active {
+        transform: translateY(1px);
+    }
+ 
+    /* Services */
+    .services {
+        color: #121869;
+        width: 100%;
+        height: 50px;
+        display: inline-block;
+        text-align: left;
+        margin-top: 60px;
+        margin-left: 50px;
+    }
+    .services h2 {
+        color: #080d55;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .services h1 {
+        font-size: 40px;
+        color: #121869;
+    }
+    .services h1 span {
+        font-weight: normal;
+        color: black;
+        font-size: 24px;
+    }
+  
+    /* ======= audit container ========*/
+    .audit-container{
+        background-color: rgb(230, 230, 224);
+        color: rgb(1, 51, 26);
+        margin: 30px;
+        padding: 30px;
+        background-image: url(computer\ screen.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        background-size: cover;
+    }
+    .audit-container h5 {
+        color:rgb(197, 195, 41);
+        text-align: center;
+        margin-top: 5px;
+        padding: 3px 20px;
+        font-size: 20px;
+    }
+    .audit-container h1{
+        font-size: 70px;
+        font-weight: bold;
+        margin-left: 35px;
+        color: rgb(119, 12, 12);
+    }   
+    .audit-box1 {
+        background-color: white;
+        border-radius: 0px;
+        box-shadow: 0 4px 10px rgba(211, 201, 12, 0.08);
+        margin: 3px;
+        padding: 15px;
+        height: 190px;
+        width: 200px;
+        text-align: left;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-left: 35px;
+    }
+    .audit-box1:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(216, 216, 55, 0.15);
+    }
+
+    .audit-box2 {
+        background-color: white;
+        border-radius: 0px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        margin: 3px;
+        padding: 15px;
+        height: 160px;
+        width: 200px;
+        text-align: left;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-left: 35px;
+    }
+    .audit-box2:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }    
+
+    .audit-box3 {
+        background-color: white;
+        border-radius: 0px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        margin: 3px;
+        padding: 15px;
+        height: 130px;
+        width: 200px;
+        text-align: left;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-left: 35px;
+    }
+    .audit-box3:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .audit-box {
+        display: flex;
+        gap: 0;
+    }
+
+    /* ======== Business Advisory =========*/
+    .business-container {
+        background-color: rgb(230, 230, 224);
+        color: rgb(1, 51, 26);
+        margin: 30px;
+        padding: 50px;
+        background: url(video.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+    }
+    .business-container h5 {
+        color:rgb(209, 212, 8);
+        text-align: center;
+        margin-top: 5px;
+        padding: 3px 20px;
+        font-size: 20px;
+    }    
+    .business-container h1{
+        font-size: 70px;
+        font-weight: bold;
+        margin-left: 35px;
+        color: rgb(119, 12, 12);
+    }    
+    .business-box1 {
+        background-color: white;
+        border-radius: 0px;
+        box-shadow: 0 4px 10px rgba(211, 201, 12, 0.08);
+        margin: 3px;
+        padding: 15px;
+        height: 190px;
+        width: 200px;
+        text-align: left;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-left: 35px;
+    }
+    .business-box1:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(216, 216, 55, 0.15);
+    }   
+    .business-box2 {
+        background-color: white;
+        border-radius: 0px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        margin: 3px;
+        padding: 15px;
+        height: 160px;
+        width: 200px;
+        text-align: left;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-left: 35px;
+    }
+    .business-box2:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }    
+
+    .business-box3 {
+        background-color: white;
+        border-radius: 0px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        margin: 3px;
+        padding: 15px;
+        height: 130px;
+        width: 200px;
+        text-align: left;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-left: 35px;
+    }
+    .business-box3:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .business-box {
+        display: flex;
+        gap: 0;
+    }  
+    
+    /* =========== Tax Container =========*/
+    .tax-container {
+        background-color: rgb(230, 230, 224);
+        color: rgb(1, 51, 26);
+        margin: 30px;
+        padding: 50px;
+        background: url(background.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+    }
+    .tax-container h5 {
+        color:rgb(251, 255, 5);
+        text-align: center;
+        margin-top: 5px;
+        padding: 3px 20px;
+        font-size: 20px;
+    }    
+    .tax-container h1{
+        font-size: 70px;
+        font-weight: bold;
+        margin-left: 35px;
+        color: rgb(119, 12, 12);
+    }    
+    .tax-box1 {
+        background-color: white;
+        border-radius: 0px;
+        box-shadow: 0 4px 10px rgba(211, 201, 12, 0.08);
+        margin: 3px;
+        padding: 15px;
+        height: 190px;
+        width: 200px;
+        text-align: left;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-left: 35px;
+    }
+    .tax-box1:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(216, 216, 55, 0.15);
+    }   
+    .tax-box2 {
+        background-color: white;
+        border-radius: 0px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        margin: 3px;
+        padding: 15px;
+        height: 160px;
+        width: 200px;
+        text-align: left;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-left: 35px;
+    }
+    .tax-box2:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }    
+
+    .tax-box3 {
+        background-color: white;
+        border-radius: 0px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        margin: 3px;
+        padding: 15px;
+        height: 130px;
+        width: 200px;
+        text-align: left;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-left: 35px;
+    }
+    .tax-box3:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .tax-box {
+        display: flex;
+        gap: 0;
+    } 
+
+    /* ======= 04 Outsourcing =========*/
+    
+    .outsourcing-container {
+        background-color: rgb(230, 230, 224);
+        color: rgb(1, 51, 26);
+        margin: 30px;
+        padding: 50px;
+        background-image: url(wallpaper.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;        
+    }
+    .outsourcing-container h5 {
+        color:rgb(209, 212, 8);
+        text-align: center;
+        margin-top: 5px;
+        padding: 3px 20px;
+        font-size: 20px;
+    }    
+    .outsourcing-container h1{
+        font-size: 70px;
+        font-weight: bold;
+        margin-left: 35px;
+        color: rgb(119, 12, 12);
+    }    
+    .outsourcing-box1 {
+        background-color: white;
+        border-radius: 0px;
+        box-shadow: 0 4px 10px rgba(211, 201, 12, 0.08);
+        margin: 3px;
+        padding: 15px;
+        height: 190px;
+        width: 200px;
+        text-align: left;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-left: 35px;
+    }
+    .outsourcing-box1:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(216, 216, 55, 0.15);
+    }   
+    .outsourcing-box2 {
+        background-color: white;
+        border-radius: 0px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        margin: 3px;
+        padding: 15px;
+        height: 160px;
+        width: 200px;
+        text-align: left;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-left: 35px;
+    }
+    .outsourcing-box2:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }    
+
+    .outsourcing-box3 {
+        background-color: white;
+        border-radius: 0px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        margin: 3px;
+        padding: 15px;
+        height: 130px;
+        width: 200px;
+        text-align: left;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-left: 35px;
+    }
+    .outsourcing-box3:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .outsourcing-box {
+        display: flex;
+        gap: 0;
+    } 
+    
+    /* Har section ek full page hoga */
+    .audit-container,
+    .business-container,
+    .tax-container,
+    .outsourcing-container {
+    position: sticky;
+    top: 0;
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+    transition: transform 0.8s ease-out;
+    }
+
+    /* ========Industries ==========*/
+    .industries{
+        color: black;
+        position: relative;
+        width: 100%;
+        margin: 20px;
+        display: flex;
+        gap: 220px;
+    }
+    .industries h3{
+        font-size: 24px;
+        padding: 40px;
+        color: #121869;
+        font-weight: normal;
+    }
+    .industries-box1{
+        color: rgb(31, 4, 105);
+        font-weight: lighter;
+        display:inline-flex;
+        margin: 3px;
+        padding: 15px;
+        height: 190px;
+        width: 200px;
+        text-align: left;
+    }
+    .industries-box1:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+    .industries-box2{
+        color: rgb(31, 4, 105);
+        font-weight: lighter;
+        display:inline-flex;
+        margin: 3px;
+        padding: 15px;
+        height: 190px;
+        width: 200px;
+        text-align: left;
+    }
+    .industries-box2:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+    .industries-box{
+        display: flex;
+        gap: 80px;
+        margin: 60px;
+    }
+
+    /* Build Trust Section */
+    .build-container {
+        background-color: #baccfc;
+        text-align: bottom left;
+        padding: 60px 20px;
+        margin-top: 0px; /* space from industries */
+        width: 100%;
+        height: 350px;
+        position: relative; /* remove absolute */ 
+        background-image: url(Layer_Photo.jpg);
+    }
+    .build-container h1 {
+        font-size: 68px;
+        color: #121869; 
+        font-weight: bold;
+        text-align: bottom left;
+    }
+    .build-container span {
+        color: #fefeff; /* blue highlight */
+        display: block;
+    }
+
+    /* ======= Why us =======*/
+    .why-us{
+        color: rgb(16, 7, 70);
+        margin-left: 40px;
+        width: 35%;
+        text-align: left;
+        background-image: url(Business\ man.jpg);
+        background-repeat: no-repeat;   /* image repeat na ho */
+        background-position: center;    /* image center me ho */
+        background-size: contain;       /* full image dikhai de, cut na ho */
+        padding-right: 1000px; 
+    }
+    .why-us h3{
+        font-weight: lighter;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .why-us h2{
+        font-weight: bold;
+        font-size: 38px;
+        margin-bottom: 20px;
+    }
+    .why-us p{
+        font-size: 20px;
+        margin-bottom: 30px;
+        line-height: 1.6;
+    }
+    .about{
+        color: #080d55;
+    }
+    .about h4{
+        font-size: 24px;
+        font-weight: lighter;
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+    }
+    .about h4::after {
+        content: "";               /* pseudo-element for underline */
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;                  /* start me hidden */
+        height: 2px;
+        background-color: #f54009; /* underline ka color */
+        transition: width 0.3s ease; /* animation effect */
+    }
+    .about h4:hover::after {
+        width: 100%;               /* hover par underline appear */
+    }
+    .years {
+    width: 85%;
+    text-align: right;
+    color: #080d55;
+    }
+    .years h1{
+        margin: 24px;
+        text-align: top right;
+        font-weight: bold;
+        display: inline-block;           /* line sirf text tak limited ho */
+        border-bottom: 2px solid #fd3710; /* red underline */
+        padding-bottom: 5px;              /* line aur text me thoda gap */
+    }
+    .years span {
+        font-size: 16px;
+        font-weight: lighter;
+        display: block;
+    }
+
+    /* ========= UHY Pakistan ========*/
+    .UHY-Container{
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        align-items: flex-start;
+        background-color: #01948f;
+        padding: 60px;
+        min-height: 100vh;
+        height: auto;
+        font-family: 'Poppins', sans-serif;
+        box-sizing: border-box;
+        background-image: url(very\ cool.jpg);
+        background-repeat: no-repeat;
+    }
+    .UHY-Container h1{
+        font-size: 44px;
+        margin-bottom: 30px;
+        color: #baccfc;
+    }
+    .UHY-box{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 20px;
+    }
+    /* Individual boxes */
+    .UHY-box1, .UHY-box2, .UHY-box3, .UHY-box4, .UHY-box5, .UHY-box6 {
+        background-color: white;
+        color: #002244;
+        border-radius: 0px;
+        width: 180px;
+        height: 230px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+        transition: transform 0.3s, background-color 0.3s;
+    }
+    /* Icon styling */
+    .check i {
+        color: #38052b;
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    /* Hover effect */
+    .UHY-box1:hover,
+    .UHY-box2:hover,
+    .UHY-box3:hover,
+    .UHY-box4:hover,
+    .UHY-box5:hover,
+    .UHY-box6:hover {
+        transform: translateY(-6px);
+        background-color: #baccfc;;
+    }
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .UHY-box {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    /* Responsive: stack content for mobile */
+    @media (max-width: 992px) {
+        .UHY-Container {
+            flex-direction: column;
+            align-items: flex-end;
+            height: auto;
+        }
+    }
+    .UHY-box {
+        justify-content: center;
+    }
+
+    /* ======== Get Started ========*/
+    .Get-Started {
+        color:#0b4a8a;
+        margin: 10px;
+        padding: 50px;
+    }
+    .Get-Started h3{
+        font-size: 24px;
+        font-weight: lighter;
+    }
+    .Get-Started h1 {
+        font-size: 44px;
+        font-weight: bold;
+        text-align: left;
+        color: #080d55;
+    }
+    .Get-Started span{
+        display: flex;
+    }
+    .get-container {
+        display: flex;
+        background-image: url(freepic.jpg);
+        width: 100%;
+        display: flex;
+        height: 70vh;
+        justify-content: flex-end;
+        background-size: cover;
+        background-repeat: no-repeat;  
+        margin-top: 40px;
+        flex-direction: column; /* stack children vertically */
+        align-items: flex-end;
+    }
+    .get-container h1 {
+        white-space: pre-line;
+        margin: 50px;
+        padding: 10px;
+    }
+    .get-container h3 {
+        margin-top: 10px;
+        font-weight: normal;
+        display: block; /* default */
+        text-align: right;
+        color: black;
+        font-size: 20px;
+    }
+    .get-container span {
+        display: flex;
+    }
+
+    /*======== Registration Form Container ========*/
+    .registration-form {
+        display: flex;
+        width: 100%;
+        padding: 40px;
+        justify-content: space-between;   /* <-- FIX */
+        align-items: flex-start;
+        font-family: Arial, sans-serif;
+    }
+
+    /*======== Form Box ========*/
+    .registration-form form {
+        width: 420px;
+        padding: 25px;
+        border: none;
+        border-radius: 4px;
+        background: #fff;
+        margin-right: 50px;
+    }
+
+    /*======== Input Group ========*/
+    .input-group {
+        margin-bottom: 20px;     /* spacing below each field */
+    }
+
+    /*======== Row (Side-by-side fields) ========*/
+    .row {
+        display: flex;
+        gap: 40px;               /* spacing between two fields in a row */
+    }
+
+    .row .input-group {
+        flex: 1;
+    }
+
+    /*======== Label Styling ========*/
+    .registration-form label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 8px;      /* spacing under the label */
+        color: #0b4a8a;
+    }
+
+    /*======== Input Styling ========*/
+    .registration-form input {
+        width: 100%;
+        padding: 16px;           /* inner padding */
+        border: 1px solid #ccc;
+        border-radius: 0px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+    /*======== Message Field Extra Space ========*/
+    .message-field {
+        margin-bottom: 25px;     /* space before the button */
+    }
+
+    /*======== Submit Button ========*/
+    .registration-form button {
+        width: 100%;
+        padding: 14px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 0px;
+    }
+
+    .registration-form button:hover {
+        background-color: #45a049;
+    }
+    /*=======OR Reach=======*/
+    /* LEFT SIDE TEXT AREA */
+    .reach {
+        max-width: 250px;      /* width of the left section */
+        padding: 10px 0;       /* top + bottom spacing */
+        font-family: Arial, sans-serif;
+    }
+
+    .reach h4 {
+        margin-bottom: 20px;   /* space below heading */
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .reach p {
+        margin: 15px 0;        /* spacing between lines */
+        line-height: 24px;     /* better readability */
+        font-size: 18px;
+        color: #333;
+    }
+
+    .reach hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 15px 0;        /* space above & below hr lines */
+    }
+    .registration-form textarea {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    font-size: 14px;
+    box-sizing: border-box;
+    height: 120px;        /* ≈ 5 lines tall */
+    resize: none;         /* prevents resizing (optional) */
+}
+</style>
+</head>
+<body>
+    <header>
+        <!--Navbar-->
+        <div class="navbar">
+            <!--Logo-->
+            <div class="nav-logo">
+                <div class="logo"></div>
+                <div class="connect">Connect to possibility</div>
+            </div>
+            <div class="nav-links">
+        <a href="Home">Home</a>
+        <a href="Services">Services</a>
+        <a href="Industries">Industries</a>
+        <a href="People">People</a>
+        <a href="About">About</a>
+        <a href="UHY International">UHY International</a>
+        <a href="Contact us" class="contact-btn">Contact us</a> <!-- only this one styled -->
+        </div>
+        </div>
+    </header>
+        <!-- Main Container -->
+        <div class="main-container">
+        <h1><b>Unravel financial complexities with</b></h1>
+
+        <p class="typing "><b>Expert guidance</b></p>
+        
+        <p>Gain clear insight into your financial health</p>
+
+        <br>
+        <div class="button">Get in touch</div>
+        </div>
+
+    <div class="services">
+        <h2>Services</h2>
+        <h1><b>To meet your needs</b> / <span>Audit, Taxation and Advisory Services</span></h1>
+    </div>
+
+    <!-- 01 Audit -->
+     <section>
+    <div class="audit-container">
+        <h5>01 Audio</h5>
+        <h1><b>Audit</b></h1>
+        <div class="audit-box">
+        <div class="audit-box1">
+            <h3>Financial Statement Audits</h3>
+           <p> We perform a thorough review of your financial statements, ensuring they comply with accounting standards and accurately represent your company's financial position</p>
+        </div>
+
+        <div class="audit-box2">
+            <h3><b>Internal Audit Services</b></h3>
+            <p>We can act as your internal audit team, identifying areas for improvement in your internal controls and risk management practices.</p>
+        </div>
+
+        <div class="audit-box3">
+            <h3><b>Compliance Audits</b></h3>
+            <p>We ensure your company adheres to relevant legal and regulatory requirements.</p>
+        </div>
+        </div>
+    </div>
+
+    <!--02 Business Advisory-->
+    <div class="business-container">
+        <h5>02 Business Advisory</h5>
+        <h1><b>Business Advisory</b></h1>
+        <div class="business-box">
+        <div class="business-box1">
+            <h3>Financial Advisory</h3>
+           <p> We provide personalized financial advisory services tailored to meet your unique goals and aspirations</p>
+        </div>
+
+        <div class="business-box2">
+            <h3><b>Risk Advisory</b></h3>
+            <p>We help businesses navigate uncertainties and optimize their risk management strategies.</p>
+        </div>
+
+        <div class="business-box3">
+            <h3><b>Merger and Acquisiton</b></h3>
+            <p>We streamline mergers and acquisitions, maximizing value and strategic outcomes.</p>
+        </div>
+        </div>
+    </div>  
+    
+    <!-- 03 Tax-->
+    <div class="tax-container">
+        <h5>03 Tax</h5>
+        <h1><b>Taxation</b></h1>
+        <div class="tax-box">
+        <div class="tax-box1">
+            <h3>Filing Tax Returns</h3>
+           <p>We handle timely & accurate filings, guaranteeing compliance & peace of mind.</p>
+        </div>
+
+        <div class="tax-box2">
+            <h3><b>Direct and Indirect Taxation</b></h3>
+            <p>We ensure compliance and optimizing tax efficiency for businesses and individuals alike.</p>
+        </div>
+
+        <div class="tax-box3">
+            <h3><b>Tax Consultancy</b></h3>
+            <p>Our expert consultancy optimizes your tax burden for maximized efficiency.</p>
+        </div>
+        </div>
+    </div>       
+
+     <!-- 04 Outsourcing -->
+    <div class="outsourcing-container">
+        <h5>04 Outsourcing</h5>
+        <h1><b>Outsourcing</b></h1>
+        <div class="outsourcing-box">
+        <div class="outsourcing-box1">
+            <h3>Book-keeping & Accounting</h3>
+           <p>Free up your valuable time and resources by outsourcing your bookkeeping and accounting functions to our team.</p>
+        </div>
+
+        <div class="outsourcing-box2">
+            <h3><b>Tax Preparation</b></h3>
+            <p>Ensure your tax returns are filed accurately and on time with our reliable tax preparation services.</p>
+        </div>
+
+        <div class="outsourcing-box3">
+            <h3><b>Payroll Processing</b></h3>
+            <p>Streamline your payroll process and ensure your employees are paid accurately.</p>
+        </div>
+        </div>
+    </div> 
+    </section>
+
+    <section>
+    <!-- Industries-->
+     <div class="industries">
+        <h3><b>Industries</b></h3>
+        <div class="industries-box">
+            <div class="industries-box1">
+                <p>Banking and Financial Services
+                    Energy & Utilities
+                    Education & Related
+                    High Tech, Electronics & IT
+                    Hospitality, Tourism & Leisure</p>
+                </div>
+
+                <div class="industries-box2">
+                    <p>Not for Profit Organizations
+                        Retail Sector & Manufacturing
+                        Sugar & Allied
+                        Textile Manufacturing
+                        Transport, Infrastructure & Development</p>
+                </div>
+        </div>
+     </div>
+</section>
+
+    <!-- Build Trust Section -->
+    <section class="build-container">
+        <h1><b>Build trust, <span>Enhance value.</span></b></h1>
+    </section>    
+
+    <!-- Why us -->
+    <div class="why-us">
+        <h3>Why us</h3>
+        <h2>Our approach is to deliver relevant and intelligent solutions to our clients.</h2>
+        <p>We pride ourselves on delivering the highest standard of professional services to our clients in a timely, professional and intelligent manner. We have professional relationships with suppliers that share our values to assist our clients if required. These include the disciplines of Audit, Tax and Consultancy.</p>
+        <div class="about">
+            <h4>About us</h4>
+        </div>
+    </div>
+
+    <div class="years">
+      <h1>17+ <span>YEARS OF EXPERIENCE</span></h1>
+      <h1>500+ <span>CLIENTS</span></h1>
+      <h1>200+ <span>WORKFORCE</span></h1>
+    </div>
+  </div>
+</div>
+   
+    <!-- UHY Pakistan-->
+     <div class="UHY-Container">
+        <h1>At UHY Pakistan Integrity Meets Excellence, Globally Inspired, Locally Empowered</h1>
+        <div class="UHY-box">
+            <div class="UHY-box1">
+                <div class="check">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <h3>Integrity</h3>
+                <p>We maintain unyielding moral standards, ensuring honesty and fairness in every aspect of our work.</p>
+            </div>
+
+            <div class="UHY-box2">
+                <div class="check">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <h3>Global Reach, Local Expertise</h3>
+                <p>We combine our global network's extensive reach with in-depth local knowledge to provide unparalleled service.</p>
+            </div>
+
+            <div class="UHY-box3">
+                <div class="check">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <h3>Trust</h3>
+                <p>We are committed to building lasting relationships founded on trust, underpinned by our reliability and consistent performance</p>
+            </div>
+
+            <div class="UHY-box4">
+                <div class="check">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <h3>Client-Centric Approach</h3>
+                <p>At our core, we prioritize understanding and meeting the unique needs of each client.</p>
+            </div>
+
+            <div class="UHY-box5">
+                <div class="check">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <h3>Professionalism</h3>
+                <p>Our team embodies the utmost professionalism, demonstrating extensive expertise and a meticulous approach in all our endeavors.</p>
+            </div>
+
+            <div class="UHY-box6">
+                <div class="check">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <h3>Innovation</h3>
+                <p>We are at the forefront of innovation, adopting cutting-edge strategies and solutions to stay ahead.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Get Started-->
+     <div class="Get-Started">
+        <h3>Get started</h3>
+        <h1>Schedule your personalized consultation <span>today</span></h1>
+        <div class="get-container">
+            <h1>We
+                are
+                better
+                together.
+            </h1>
+
+            <h3>Drop your contact details into the form,<span> and we’ll reach out to you!</span></h3>
+        </div>
+     </div>
+    
+    <!-- Registration Form -->
+     <div class="registration-form">
+
+    <!-- LEFT SIDE TEXT -->
+    <div class="reach">
+        <h4>OR REACH US AT:</h4>
+        <hr>
+        <p>
+            T: +92 42 35403550 <br>
+            E: info@uhy-hnco.com
+        </p>
+        <hr>
+    </div>
+
+    <!-- RIGHT SIDE FORM -->
+    <form>
+        <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" placeholder=" " required>
+    </div>
+
+    <!-- Email + Phone Number (Same row) -->
+    <div class="row">
+        <div class="input-group">
+            <label>Email</label>
+            <input type="email" placeholder=" " required>
+        </div>
+
+        <div class="input-group">
+            <label>Phone Number</label>
+            <input type="text" placeholder=" " required>
+        </div>
+    </div>
+
+    <!-- Company Name + Website (Same row) -->
+    <div class="row">
+        <div class="input-group">
+            <label>Company Name</label>
+            <input type="text" placeholder=" " required>
+        </div>
+
+        <div class="input-group">
+            <label>Website</label>
+            <input type="text" placeholder=" ">
+        </div>
+    </div>
+
+    <!-- Message -->
+    <div class="input-group message-field">
+    <label>Message</label>
+    <textarea placeholder="Tell us more about your needs"></textarea>  
+    </div>
+
+    <button type="submit">Submit</button>
+    </form>
+
+</div>
+</body>
+</html>
